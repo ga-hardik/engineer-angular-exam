@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row margin-top-15">
+    <div class="col-sm-4">
+      <form class="search-form">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control search-input" [(ngModel)]="searchtext" name="search" id="search"
+            placeholder="Search">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table-responsive">
+        <table class="table" *ngIf="rows">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Url</th>
+              <th scope="col">Created_At</th>
+              <th scope="col">Author</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rows.hits | titleFilter:searchtext;let i=index" (click)="openModel(row)">
+              <th scope="row">{{i+1}}</th>
+              <td>{{row.title}}</td>
+              <td>{{row.url}}</td>
+              <td>{{row.created_at | date:'shortDate'}}</td>
+              <td>{{row.author}}</td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

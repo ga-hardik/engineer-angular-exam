@@ -1,0 +1,25 @@
+.table {
+  border: 1px solid #ddd;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-shadow: 10px 10px 35px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 35px -10px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 35px -10px rgba(0,0,0,0.75);
+  margin-bottom: 50px;
+
+  tr {
+    cursor: pointer;
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}
+
+.search-input{
+  position: relative;
+  left: 15.5%;
+}
+
+.margin-top-15{
+  margin-top: 15px;
+}

@@ -1,0 +1,11 @@
+<div class="modal-header">
+  <h5 class="modal-title">{{data.title}}</h5>
+</div>
+<div class="modal-body">
+  <ul class="list-group">
+    <li class="list-group-item">{{data |json}}</li>
+  </ul>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
